@@ -1,1 +1,88 @@
+.people {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-top: 22px;
+    max-width: 1000px;
+    margin: 0 auto;
 
+    @media(max-width: 750px) {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
+    }
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2F4F4F;
+}
+
+.details {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 211px;
+    height: 275px;
+    flex-direction: column;
+    transition: transform 1s ease, background-color 0s ease;
+    position: relative;
+
+    &:hover {
+        transform: scale(1.2);
+        background-color: #EEEEEE;
+        border-radius: 12px;
+    }
+
+    &:hover img {
+        border-radius: 60px;
+    }
+    
+    &:hover .extra{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s linear 0s;
+    }
+}
+
+.photo {
+    position: relative;
+}
+
+.rank {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color:#8B0000;
+    font-size: 16px;
+    border: none;
+    border-radius: 50%;
+    right: 10px;
+    bottom: 90px;
+}
+
+img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: border-radius 1s ease, transform 1s ease;
+}
+
+.extra {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  white-space: nowrap;
+  padding-bottom: 16px;
+}
