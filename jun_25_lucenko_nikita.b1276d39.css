@@ -1,0 +1,89 @@
+.people {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+}
+
+@media (width <= 750px) {
+  .people {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+  }
+}
+
+.name {
+  color: #2f4f4f;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.details {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.person {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 211px;
+  height: 275px;
+  transition: transform 1s, background-color;
+  display: flex;
+  position: relative;
+}
+
+.person:hover {
+  background-color: #eee;
+  border-radius: 12px;
+  transform: scale(1.2);
+}
+
+.person:hover img {
+  border-radius: 60px;
+}
+
+.person:hover .extra {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s, visibility linear;
+}
+
+.photo {
+  position: relative;
+}
+
+.rank {
+  color: #8b0000;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  display: flex;
+  position: absolute;
+  bottom: 90px;
+  right: 10px;
+}
+
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  transition: border-radius 1s, transform 1s;
+}
+
+.extra {
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  padding-bottom: 16px;
+  transition: opacity 1s;
+  position: relative;
+}
+/*# sourceMappingURL=jun_25_lucenko_nikita.b1276d39.css.map */
